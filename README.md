@@ -1,6 +1,6 @@
 # IMKGC
 
-Source code for AAAI2026 paper: [_Information-Theoretic Minimal Sufficient Representation for Multi-Domain Knowledge Graph Completion_](https://github.com/JiaweiSheng/IMKGC/blob/main/AAAI_2026_IMKGC.pdf).
+Source code for AAAI2026 paper: [_Information-Theoretic Minimal Sufficient Representation for Multi-Domain Knowledge Graph Completion_](https://github.com/JiaweiSheng/IMKGC/blob/main/Paper_AAAI2026.pdf).
 
 Multi-domain knowledge graph completion (MKGC) seeks to predict missing triples in a target KG by leveraging triples from multiple KGs in different domains (e.g., languages or sources).
 Existing studies can conceal task-relevant information in representations, impeding further improvements when scaling to numerous KGs.
