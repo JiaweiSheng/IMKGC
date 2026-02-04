@@ -64,8 +64,8 @@ def parse_args(args=None):
     parser.add_argument('--optimizer', type=str, default="Adam", help='Adam, AdamW')
     parser.add_argument('--weight_decay', type=float, default=0, help='weight decay')
     parser.add_argument('--dropout', type=float, default=0.1, help='Dropout rate')
-    parser.add_argument('--scheduler', type=str, default="constant", help='constant, linear')
-    parser.add_argument('--warmup', default=0, type=int, help="warmup rounds")
+    parser.add_argument('--scheduler', type=str, default="linear", help='constant, linear')
+    parser.add_argument('--warmup', default=1, type=int, help="warmup rounds")
     
     # Model related
     parser.add_argument('--margin', default=0.3, type=float)
@@ -80,28 +80,17 @@ def parse_args(args=None):
     parser.add_argument('--test_batch_size', default=200, type=int, help="batch size for testing")
     parser.add_argument('--MAX_SAM', default=10000000000, type=int, help="subset of data for debugging")
 
-    parser.add_argument('--v_gnn', default='same', type=str, help="")
     parser.add_argument('--v', default='', type=str, help="")
-    parser.add_argument('--v_loss', default='', type=str, help="")
-    parser.add_argument('--v_fusion', default='mean', type=str, help="")
-    parser.add_argument('--v_ent', default='', type=str, help="")
-    parser.add_argument('--v_rel', default='', type=str, help="")
-    parser.add_argument('--flow', default='', type=str, help="")
-    parser.add_argument('--K', default=10, type=int, help="")
-    parser.add_argument('--v_note', default='', type=str, help="")
-
     parser.add_argument('--clamp', default=3., type=float, help = '')
     parser.add_argument('--lw', type=str, default='n',choices=['y', 'n'], help='')
     parser.add_argument('--model', default='imkgc', type=str, help="")
     parser.add_argument('--decoder', default='TransE', type=str, help="")
-    parser.add_argument('--fusion', default='mean', type=str, help="")
     parser.add_argument('--temp', type=float, default=0.5, help='temp')
 
     parser.add_argument('--alpha', type=float, default=0.01, help='gamma')
     parser.add_argument('--beta', type=float, default=0.0001, help='beta')
     parser.add_argument('--gamma', type=float, default=0.001, help='alpha')
     parser.add_argument('--omega', type=float, default=0.01, help='')
-    parser.add_argument('--loss_fusion', type=str, default='def', help='assist')
 
     parser.add_argument('--vq_loss_w', type=float, default=0.0001, help='')
     parser.add_argument('--reason_step', default=2, type=int, help="")
